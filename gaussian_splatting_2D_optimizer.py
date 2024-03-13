@@ -141,23 +141,23 @@ class GaussianSplatting2dOptimizer:
                 # Split points with large coordinate gradient and large gaussian values and descale their gaussian
                 if len(common_indices) > 0:
                     print(f"number of splitted points: {len(common_indices)}")
-                    start_index = current_marker + 1
-                    end_index = current_marker + 1 + len(common_indices)
+                    start_index = self.current_marker + 1
+                    end_index = self.current_marker + 1 + len(common_indices)
                     self.persistent_mask[start_index: end_index] = True
                     W.data[start_index:end_index, :] = W.data[common_indices, :]
                     scale_reduction_factor = 1.6
                     W.data[start_index:end_index, 0:2] /= scale_reduction_factor
                     W.data[common_indices, 0:2] /= scale_reduction_factor
-                    current_marker = current_marker + len(common_indices)
+                    self.current_marker = self.current_marker + len(common_indices)
 
                 # Clone it points with large coordinate gradient and small gaussian values
                 if len(distinct_indices) > 0:
                     print(f"number of cloned points: {len(distinct_indices)}")
-                    start_index = current_marker + 1
-                    end_index = current_marker + 1 + len(distinct_indices)
+                    start_index = self.current_marker + 1
+                    end_index = self.current_marker + 1 + len(distinct_indices)
                     self.persistent_mask[start_index: end_index] = True
                     W.data[start_index:end_index, :] = W.data[distinct_indices, :]
-                    current_marker = current_marker + len(distinct_indices)
+                    self.current_marker = self.current_marker + len(distinct_indices)
 
             optimizer.step()
 
