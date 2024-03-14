@@ -4,11 +4,10 @@ from https://github.com/OutofAi/2D-Gaussian-Splatting
 Code Explanation see at https://zhuanlan.zhihu.com/p/686991175
 test 2d gaussian splatting generator function:  
 ```python test_generate_2D_gaussian_splatting.py```
-
+![Figure_1.png](Figure_1.png)
 run demo:  
-```python main.py```  
-
-![900.jpg](2024_03_13-15_36_37%2F900.jpg)  
+```python main.py```
+![2000.jpg](2024_03_14-10_44_37%2F2000.jpg)
 
 ## generating 2D Gaussian Splatting ##
 
