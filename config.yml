@@ -1,6 +1,6 @@
 KERNEL_SIZE: 101
 image_size: [256, 256, 3]
-primary_samples: 1200
+primary_samples: 1001
 backup_samples: 4000
 num_epochs: 2001
 densification_interval: 300
@@ -9,4 +9,4 @@ image_file_name: "panda.png"
 display_interval: 100
 gradient_threshold: 0.002
 gaussian_threshold: 0.002
-display_loss: True
+display_loss: False

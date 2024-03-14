@@ -5,7 +5,7 @@ from generate_2D_gaussian_splatting import generate_2D_gaussian_splatting
 
 device = "cpu"
 
-kernel_size = 3  # You can adjust the kernel size as needed
+kernel_size = 101  # You can adjust the kernel size as needed
 sigma_x = torch.tensor([2.0, 0.5, 0.5, 0.2], device=device)
 sigma_y = torch.tensor([2.0, 1.5, 1.5, 0.3], device=device)
 rho = torch.tensor([0.0, -0.9, 0.9, 0.1], device=device)
