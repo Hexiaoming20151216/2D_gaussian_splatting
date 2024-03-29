@@ -1,7 +1,7 @@
 # 2D_gaussian_splatting
 
 from https://github.com/OutofAi/2D-Gaussian-Splatting  
-Code Explanation see at https://zhuanlan.zhihu.com/p/686991175  
+Code Explanation see: https://zhuanlan.zhihu.com/p/686991175  
 
 ## run demo  
 test 2d gaussian splatting generator function:  
